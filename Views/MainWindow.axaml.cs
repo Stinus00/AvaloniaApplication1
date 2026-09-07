@@ -23,10 +23,10 @@ public partial class MainWindow : Window
     }
     private List<Item> _mediaPaths = new List<Item>
     {
-        new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "images", "react-logo.png"), type = "image", duration = "asljd" },
+        new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "images", "react-logo.png"), type = "image", duration = "asljd" }, // Broken
         new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "videos", "test2.mp4"), type = "video" },
         new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "images", "react-logo.png"), type = "image", duration = "2000" },
-        new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "images", "broken.png"), type = "image", duration = "2000" },
+        new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "images", "broken.png"), type = "image", duration = "2000" }, // Broken
         new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "videos", "test1.mp4"), type = "video" },
         new Item { path = Path.Combine(AppContext.BaseDirectory, "Assets", "videos", "test3.mp4"), type = "video" }
     };
@@ -38,19 +38,6 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
-
-    // private void Button_OnClick(object? sender, RoutedEventArgs e)
-    // {
-    //     if (double.TryParse(Celsius.Text, out double celsius))
-    //     {
-    //         double fahrenheit = (celsius * 9 / 5) + 32;
-    //         Fahrenheit.Text = fahrenheit.ToString("F2");
-    //     }
-    //     else
-    //     {
-    //         Fahrenheit.Text = "Invalid input";
-    //     }
-    // }
 
     protected override void OnLoaded(RoutedEventArgs e)
     {
