@@ -1,0 +1,50 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaApplication1"
+        Width="800" Height="450">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0">
+        
+        <!-- <Border Margin="5" CornerRadius="10" Background="DarkBlue">
+            <TextBlock  
+                Text="Temperature Converter"
+                Margin="5"
+                FontSize="24"
+                HorizontalAlignment="Center"
+            />
+        </Border>
+        <Grid ShowGridLines="True" Margin="5"
+                ColumnDefinitions="120, 100"
+                RowDefinitions="Auto, Auto"
+              >
+              <TextBlock Grid.Row="0" Grid.Column="0" Margin="10">Celsius</TextBlock>
+              <TextBox Grid.Row="1" Grid.Column="0" Margin="10" Name="Celsius" Text="0"/>
+              <TextBlock Grid.Row="0" Grid.Column="1" Margin="10">Fahrenheit</TextBlock>
+              <TextBox Grid.Row="1" Grid.Column="1" Margin="10" Name="Fahrenheit" Text="0"/>
+        </Grid>
+        <Button HorizontalAlignment="Center" Click="Button_OnClick">Calculate</Button> -->
+        <MediaPlayerControl Name="MediaPlayer"
+                    Margin="0"
+                    LoadedBehavior="AutoPlay"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch" />
+        <Image Name="ImageControl"
+               Margin="0"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               Stretch="Uniform" />
+
+    </Grid>
+</Window>
